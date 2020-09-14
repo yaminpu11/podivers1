@@ -6,26 +6,25 @@ class C_portal extends MY_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->data['G_biodata'] = $this->m_master->caribasedprimary('db_alumni.biodata','NPM',$this->session->userdata('alumni_NPM'));
+        // $this->data['G_biodata'] = $this->m_master->caribasedprimary('db_alumni.biodata','NPM',$this->session->userdata('alumni_NPM'));
     }
 
-    private function left_menu_profile($page){
 
-        $data['page'] = $page;
-        $content = $this->load->view('portal/profile/left_menu',$data,true);
+    public function index()
+    {
+        $data["pageTitle"] = "Dashboard";
+        $content = $this->load->view('portal/V_home',$data,true);
+        parent::template_portal($content);
+    }
+    
+    public function menu_content(){
+        // // $data['pages'] = $pages;
+        // $data['department'] = parent::__getDepartement();
+        // $data['category'] = $this->m_lpmi->get_category();
+        $content = $this->load->view('portal/menu_content','',true);
         parent::template_portal($content);
     }
 
-    public function profile(){
-
-        $page = $this->load->view('portal/profile/profile',$this->data,true);
-        $this->left_menu_profile($page);
-    }
-
-    public function about_me(){
-        $page = $this->load->view('portal/profile/about_me',$this->data,true);
-        $this->left_menu_profile($page);
-    }
 
     public function biodata(){
         $this->data['LoadSelectCountry'] = $this->m_master->caribasedprimary('db_admission.country','ctr_active',1);

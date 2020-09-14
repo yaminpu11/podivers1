@@ -18,7 +18,7 @@ switch ($ServerName) {
 //        $db['default']['password'] = 'Uap)(*&^%';
 
 
-        $db['default']['database'] = 'db_academic';
+        $db['default']['database'] = 'db_podivers';
         $db['default']['dbdriver'] = 'mysqli';// support with MYSQl,POSTGRE SQL, ORACLE,SQL SERVER
         $db['default']['dbprefix'] = '';
         $db['default']['pconnect'] = TRUE;
@@ -32,7 +32,7 @@ switch ($ServerName) {
         $db['default']['stricton'] = FALSE;
 
         break;
-    case 'alumni.podomorouniversity.ac.id':
+    case 'podivers.podomorouniversity.ac.id':
         $db['default']['hostname'] = '10.1.30.18';
         $db['default']['username'] = 'db_itpu';
         $db['default']['password'] = 'Uap)(*&^%';
@@ -50,7 +50,7 @@ switch ($ServerName) {
         $db['default']['stricton'] = FALSE;
 
         break;
-    case 'demopcam.podomorouniversity.ac.id':
+    case 'demopodivers.podomorouniversity.ac.id':
         $db['default']['hostname'] = '10.1.30.59';
         $db['default']['username'] = 'db_itpu';
         $db['default']['password'] = 'Uap)(*&^%';

@@ -24,7 +24,7 @@ class C_login extends CI_Controller {
 			$input = $this->getInputToken2();
 
 			// post API
-			$url = url_server_ws.'rest_alumni/__authAlumniAPISession';
+			$url = url_server_ws.'rest_podivers/__authPodiversAPISession';
 			$post = [
 				'action' => 'authLogin',
 				'data' => [
@@ -35,7 +35,7 @@ class C_login extends CI_Controller {
 			];
 
 			// custom post
-			$Arr_Header = $this->m_master->showData_array('db_alumni.rest_setting');
+			$Arr_Header = $this->m_master->showData_array('db_podivers.rest_setting');
 			$Apikey = $Arr_Header[0]['Apikey'];
 			$Hjwtkey = $Arr_Header[0]['Hjwtkey'];
 			$customPost = [
@@ -47,9 +47,9 @@ class C_login extends CI_Controller {
 			];
 
 			$ApiPcam = $this->m_master->PostSubmitAPIWithFile($url,$post,[],$customPost);
-			if (array_key_exists('alumni_loggedIn', $ApiPcam)) {
+			if (array_key_exists('podivers_loggedIn', $ApiPcam)) {
 				$this->session->set_userdata($ApiPcam);
-				$this->db->insert('db_alumni.log_login',['NPM' => $this->session->userdata('alumni_NPM'),'LastLogin' => date('Y-m-d H:i:s') ]);
+				$this->db->insert('db_podivers.log_login',['NPM' => $this->session->userdata('podivers_NPM'),'LastLogin' => date('Y-m-d H:i:s') ]);
 			}
 
 			redirect(base_url().'portal');

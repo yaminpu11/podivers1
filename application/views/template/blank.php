@@ -6,11 +6,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head >
 	<meta charset="utf-8">
-	<title>Alumni Podomoro Unversity</title>
+	<title>Podivers Podomoro Unversity</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<!-- Favicons -->
-	<link href="<?= base_url('assets/img/pufavicon.png') ?>" rel="icon">
-	<link href="<?= base_url('assets/img/pufavicon.png') ?>" rel="apple-touch-icon">
+	<link href="<?= base_url('assets/img/favicon') ?>" rel="icon">
+	<link href="<?= base_url('assets/img/favicon') ?>" rel="apple-touch-icon">
 
 	<link href="<?= base_url('assets/css/compiled-4.10.1.min.css')?>" rel="stylesheet">
 	<link href="<?= base_url('assets/css/pu-custom.css')?>" rel="stylesheet">
@@ -18,25 +18,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link href="<?= base_url('assets/js/owlcarousel/assets/owl.carousel.css')?>" rel="stylesheet">
 	<link rel="stylesheet" href="<?= base_url('assets/js/owlcarousel/assets/owl.theme.default.min.css')?>">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="<?= base_url('assets/css/masongram.min.css');?>">
 
 	<script src="<?= base_url('assets/js/jquery-3.4.1.min.js')?>"></script>
-
 	<script src="<?= base_url('assets/js/bootstrap.min.js')?>"></script>
 	<script src="<?= base_url('assets/js/mdb.min.js')?>"></script>
 	<script src="<?= base_url('assets/js/universal-parallax.min.js')?>"></script>
 	<script src="<?= base_url('assets/img-fitter/jquery.imgFitter.js')?>" type="text/javascript"></script>
 	<script src="<?= base_url('assets/js/owlcarousel/owl.carousel.min.js'); ?>"></script> 
 	<script src="<?= base_url('assets/js/moment.js')?>"></script>
+    <script src="<?= base_url('assets/lib/lightbox/js/lightbox.min.js'); ?>"></script>
 	<!-- JWT Encode -->
     <script type="text/javascript" src="<?= base_url('assets/jwt/encode/hmac-sha256.js');?>"></script>
     <script type="text/javascript" src="<?= base_url('assets/jwt/encode/enc-base64-min.js');?>"></script>
     <script type="text/javascript" src="<?= base_url('assets/jwt/encode/jwt.encode.js');?>"></script>
 
     <!-- JWT Decode -->
-    <script type="text/javascript" src="<?= base_url('assets/jwt/decode/build/jwt-decode.min.js');?>"></script>
-    
-	<script src="assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="<?= base_url('assets/jwt/decode/build/jwt-decode.min.js');?>"></script>    
 
+    <!-- <script src="<?= base_url('assets/js/masongram.min.js');?>"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+	<script src="assets/js/modernizr.custom.js"></script>
 	<script src="<?= base_url('assets/js/provider.js')?>"></script>
 
 	<script type="text/javascript">
@@ -81,8 +87,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	.btn .fa {
 	  margin-left: 3px;
 	}
+	.top-nav-collapse {
+		background-color: #ffffff !important;
+		padding-top: 10px !important;
+		webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 
-/*	.top-nav-collapse {
+		-webkit-transition: all 0.3s linear;
+    	transition: all 0.3s linear;
+		top: 0px;
+	}
+
+/*	.navbar:not(.top-nav-collapse) {
+	  	background: white !important;
+	  	-webkit-transition: all 0.2s linear;
+		transition: all 0.2s linear;
+	  	top: 29px;
+	  	border-bottom: 1px solid #ddd;
+	}
+	.top-nav-collapse {
 	  background-color: #2BBBAD !important;
 	  padding-top: 10px !important;
 	  webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
@@ -90,7 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}*/
 
 	.navbar:not(.top-nav-collapse) {
-	  background: transparent !important;
+	  /*background: transparent !important;*/
 	}
 
 	@media (max-width: 991px) {
@@ -101,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 
 	.btn-white {
-	  color: black !important;
+	  /*color: black !important;*/
 	}
 
 	h6 {
@@ -122,10 +145,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    border-top: 1px solid rgb(255 255 255);
 	}
 	.top-nav-collapse{
-		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 	}
 	.btn-login{
-		background: #ffffff87;
+		background: #fd0202;
 	    border-radius: 20px;
 	    padding: 0px 20px;
 	}
@@ -146,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	.owl-item.active.center > div:after {
 	  content: 'active center';
 	}*/
-
+	.nav-link{color: #fff };
 	#owl-demo .item{
 	  margin: 3px;
 	}
@@ -176,9 +199,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	.owl-dots{
 		display: inline-flex;
 	}
-
+	iframe{
+		width: 246px;
+	    height: 140px;
+	}
 
 	</style>
+
+	<?php
+		$hal = $this->uri->segment(1);
+	?>
 </head>
 <!-- ======= Body ====== -->
 <body class="scrollbar scrollbar-indigo">
@@ -186,7 +216,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <header class="header">
 		
-	<nav class="navbar navbar-expand-lg navbar-light default-color lighten-4 fixed-top scrolling-navbar bg-white stylish-color text-center ">
+	<nav class="navbar navbar-expand-lg navbar-light lighten-4 fixed-top scrolling-navbar text-center ">
 		<div class="container ">			
 
 			<!-- Collapse button -->
@@ -203,20 +233,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<!-- Links -->
 				<ul class="navbar-nav nav lighten-4 py-2 mr-md-0 mr-lg-4 pb-md-0">					
-					<li class="nav-item px-3">
-						<a href="<?= base_url('about') ?>" class="nav-link text-uppercase text-hover-red text-white">BEM </a>
-					</li>					
 					
-					<li class="nav-item px-3">
-						<a href="<?= base_url('contact') ?>" class="nav-link text-uppercase text-hover-red text-white">BPM </a>
-					</li>	
-					<li class="nav-item px-3">
-						<a href="<?= base_url('contact') ?>" class="nav-link text-uppercase text-hover-red text-white">UKM </a>
-					</li>
-					<li class="nav-item px-3">
-						<a href="<?= base_url('contact') ?>" class="nav-link text-uppercase text-hover-red text-white">HIMA </a>
-					</li>
-					
+      				<li class="nav-item dropdown px-3">
+				        <a class="nav-link dropdown-toggle text-uppercase text-hover-red " id="navbarDropdownMenuLink" data-toggle="dropdown"
+				          aria-haspopup="true" aria-expanded="false">BEM</a>
+				        <div class="dropdown-menu dropdown-danger" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item <?=($hal=='bem-news')?'active':'';?>" href="<?php base_url('')?>bem-news">News</a>
+				          <a class="dropdown-item <?=($hal=='bem-event')?'active':'';?>" href="<?php base_url('') ?>bem-event">Event</a>
+				          <a class="dropdown-item <?=($hal=='bem-gallery')?'active':'';?>" href="<?php base_url('') ?>bem-gallery">Gallery</a>
+  				          <a class="dropdown-item <?=($hal=='bem-recruitment')?'active':'';?>" href="<?php base_url('') ?>bem-recruitment">Recruitment</a>
+
+				        </div>
+			        </li>						
+					<li class="nav-item dropdown px-3">
+				        <a class="nav-link dropdown-toggle text-uppercase text-hover-red " id="navbarDropdownMenuLink" data-toggle="dropdown"
+				          aria-haspopup="true" aria-expanded="false">BPM</a>
+				        <div class="dropdown-menu dropdown-danger" aria-labelledby="navbarDropdownMenuLink">
+				          <a class="dropdown-item <?=($hal=='bpm-news')?'active':'';?>" href="<?php base_url('')?>bpm-news">News</a>
+				          <a class="dropdown-item <?=($hal=='bpm-event')?'active':'';?>" href="<?php base_url('')?>bpm-event">Event</a>
+				          <a class="dropdown-item <?=($hal=='bpm-gallery')?'active':'';?>" href="<?php base_url('')?>bpm-gallery">Gallery</a>
+  				          <a class="dropdown-item <?=($hal=='bpm-recruitment')?'active':'';?>" href="<?php base_url('')?>bpm-recruitment">Recruitment</a>
+
+				        </div>
+			        </li>
+			        <li class="nav-item dropdown px-3">
+				        <a class="nav-link dropdown-toggle text-uppercase text-hover-red " id="navbarDropdownMenuLink" data-toggle="dropdown"
+				          aria-haspopup="true" aria-expanded="false">UKM</a>
+				        <div class="dropdown-menu dropdown-danger" aria-labelledby="navbarDropdownMenuLink" >
+				          <a class="dropdown-item <?=($hal=='ukm-news')?'active':'';?>" href="<?php base_url('')?>ukm-news">News</a>
+				          <a class="dropdown-item <?=($hal=='ukm-event')?'active':'';?>" href="<?php base_url('')?>ukm-event">Event</a>
+				          <a class="dropdown-item <?=($hal=='ukm-gallery')?'active':'';?>" href="<?php base_url('')?>ukm-gallery">Gallery</a>
+  				          <a class="dropdown-item <?=($hal=='ukm-recruitment')?'active':'';?>" href="<?php base_url('')?>ukm-recruitment">Recruitment</a>
+
+				        </div>
+			        </li>
+			        <li class="nav-item dropdown px-3">
+				        <a class="nav-link dropdown-toggle text-uppercase text-hover-red " id="navbarDropdownMenuLink" data-toggle="dropdown"
+				          aria-haspopup="true" aria-expanded="false">HIMA</a>
+				        <div class="dropdown-menu dropdown-danger" aria-labelledby="navbarDropdownMenuLink" >
+				          <a class="dropdown-item <?=($hal=='hima-news')?'active':'';?>" href="<?php base_url('hima-news')?>hima-news">News</a>
+				          <a class="dropdown-item <?=($hal=='hima-event')?'active':'';?>" href="<?php base_url('hima-news')?>hima-event">Event</a>
+				          <a class="dropdown-item <?=($hal=='hima-gallery')?'active':'';?>" href="<?php base_url('hima-news')?>hima-gallery">Gallery</a>
+  				          <a class="dropdown-item <?=($hal=='hima-recruitment')?'active':'';?>" href="<?php base_url('hima-news')?>hima-recruitment">Recruitment</a>
+
+				        </div>
+			        </li>
+									
 
 				</ul>
 
@@ -232,16 +294,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<!-- Links -->
 				<ul class="navbar-nav nav lighten-4 py-2 pt-md-2 pb-sm-5 pb-md-5 pb-lg-0 pt-lg-0">
 					<li class="nav-item px-3">
-						<a target="_blank" href="https://blogs.podomorouniversity.ac.id/" class="nav-link text-uppercase text-hover-red text-white">News </a>
+						<a target="_blank" href="https://blogs.podomorouniversity.ac.id/" class="nav-link text-uppercase text-hover-red ">News </a>
 					</li>	
 					<li class="nav-item px-3">
-						<a href="<?= base_url('event') ?>" class="nav-link text-uppercase text-hover-red text-white">Event </a>
+						<a href="<?= base_url('event') ?>" class="nav-link text-uppercase text-hover-red ">Event </a>
 					</li>	
 					<li class="nav-item px-3">
-						<a href="<?= base_url() ?>" class="nav-link text-uppercase text-hover-red text-white">Career </a>
+						<a href="<?= base_url() ?>" class="nav-link text-uppercase text-hover-red ">Career </a>
 					</li>
 					<li class="nav-item px-3 btn-login btn-sm mx-md-5 mx-lg-0">
-						<a target="_blank" href="https://portal.podomorouniversity.ac.id/portal-login" class="nav-link text-uppercase btn-color text-white" style="color: #fff!important">Login</a>
+						<a target="_blank" href="https://portal.podomorouniversity.ac.id/portal-login" class="nav-link text-uppercase btn-color " style="color: #fff!important">Login</a>
 					</li>				
 				</ul>
 
@@ -396,7 +458,46 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <a href="#" class="back-to-top indigo-color"><i class="fa fa-chevron-up"></i></a>
 
 <!-- scrip js -->
+<script type="text/javascript">
 
+	// Back to top button
+	$(function() {
+		$('.scrolling-navbar').css({'background': 'transparent','box-shadow': 'none'});
+		$('.nav-link').css({'color': '#fff '});
+		$('.btn-login').css({'background': 'rgb(255 255 255 / 52%) '});
+		$('.scrollbar').scroll(function() {
+			
+			if ($(this).scrollTop() >= 100) {				
+				$('.back-to-top').fadeIn('slow');
+				$('#showColor').addClass('active');
+				$('#showPutih').removeClass('active');
+				$('#showPutih').addClass('hide');
+				// $('.scrolling-navbar').hide();
+				$('.scrolling-navbar').css({'background': '#fff ','box-shadow': '0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)'});
+				$('.nav-link').css({'color': '#000 '});
+				$('.btn-login').css({'background': 'rgb(211 47 47)'});
+				$('.btn-login .nav-link').css({'color': '#fff'});
+				
+			} else {
+
+				$('.back-to-top').fadeOut('slow');	
+				$('#showColor').removeClass('active');
+				$('#showPutih').addClass('active');
+				// $('.scrolling-navbar').show();
+				$('.scrolling-navbar').css({'background': 'transparent','box-shadow': 'none'});
+				$('.nav-link').css({'color': '#fff '});
+				$('.btn-login').css({'background': 'rgb(255 255 255 / 52%)'});
+			}
+			});
+
+			$('.back-to-top').click(function(){
+			$('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+			return false;
+			});
+
+	});
+
+</script>
 <script type="text/javascript">
 	$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
 	  var next = $(this).next();
@@ -448,33 +549,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   	// Animations init
 	new WOW().init();
 </script>
-<script type="text/javascript">
 
-	// Back to top button
-	$(function() {
-		$(window).scroll(function() {
-			if ($(this).scrollTop() >= 100) {				
-				$('.back-to-top').fadeIn('slow');
-				$('#showColor').addClass('active');
-				$('#showPutih').removeClass('active');
-				$('#showPutih').addClass('hide');
-			} else {
-
-				$('.back-to-top').fadeOut('slow');	
-				$('#showColor').removeClass('active');
-				$('#showPutih').addClass('active');
-				
-			}
-			});
-
-			$('.back-to-top').click(function(){
-			$('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-			return false;
-			});
-
-	});
-
-</script>
 <script type="text/javascript">
   $(document).ready(function () {
     $('.img-fitter').imgFitter({

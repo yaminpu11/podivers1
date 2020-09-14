@@ -7,7 +7,7 @@ class MY_Controller extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('m_master');
-        if($this->session->userdata('alumni_loggedIn')){
+        if($this->session->userdata('podivers_loggedIn')){
             date_default_timezone_set('Asia/Jakarta');
         } 
         else {

@@ -36,17 +36,35 @@
         $this->template($content);
     }
 
+    function news()
+    {
+        $content = $this->load->view('template/V_news','',true);
+        $this->template($content);
+    }
+
     function details()
     {
         $content = $this->load->view('template/V_detail','',true);
         $this->template($content);
     }
 
+    function allevent()
+    {
+        $content = $this->load->view('template/V_allevent','',true);
+        $this->template($content);
+    }
     
     function about()
     {
         // print_r('ok');die();
         $content = $this->load->view('template/V_about','',true);
+        $this->template($content);
+    }
+
+    function gallery()
+    {
+        // print_r('ok');die();
+        $content = $this->load->view('template/V_gallery','',true);
         $this->template($content);
     }
 

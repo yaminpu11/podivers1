@@ -58,6 +58,32 @@ $route['about'] = 'c_dashboard/about';
 $route['contact'] = 'c_dashboard/contact';
 $route['event'] = 'c_dashboard/event';
 $route['event/(:num)'] = 'c_dashboard/details/$1';
+$route['allevent'] = 'c_dashboard/allevent';
+$route['allevent/(:num)'] = 'c_dashboard/details/$1';
+$route['bem-news'] = 'c_dashboard/news';
+$route['bem-news/(:num)'] = 'c_dashboard/details/$1';
+$route['bpm-news'] = 'c_dashboard/news';
+$route['bpm-news/(:num)'] = 'c_dashboard/details/$1';
+$route['ukm-news'] = 'c_dashboard/news';
+$route['ukm-news/(:num)'] = 'c_dashboard/details/$1';
+$route['hima-news'] = 'c_dashboard/news';
+$route['hima-news/(:num)'] = 'c_dashboard/details/$1';
+$route['bem-event'] = 'c_dashboard/event';
+$route['bem-event/(:num)'] = 'c_dashboard/details/$1';
+$route['bpm-event'] = 'c_dashboard/event';
+$route['bpm-event/(:num)'] = 'c_dashboard/details/$1';
+$route['ukm-event'] = 'c_dashboard/event';
+$route['ukm-event/(:num)'] = 'c_dashboard/details/$1';
+$route['hima-event'] = 'c_dashboard/event';
+$route['hima-event/(:num)'] = 'c_dashboard/details/$1';
+$route['bem-gallery'] = 'c_dashboard/gallery';
+$route['bem-gallery/(:num)'] = 'c_dashboard/details/$1';
+$route['bpm-gallery'] = 'c_dashboard/gallery';
+$route['bpm-gallery/(:num)'] = 'c_dashboard/details/$1';
+$route['ukm-gallery'] = 'c_dashboard/gallery';
+$route['ukm-gallery/(:num)'] = 'c_dashboard/details/$1';
+$route['hima-gallery'] = 'c_dashboard/gallery';
+$route['hima-gallery/(:num)'] = 'c_dashboard/details/$1';
 // Testimonial 
 $route['getDataTestimonial'] = 'c_branda/load_testimonial';
 // News 
@@ -67,59 +93,23 @@ $route['getDataContent'] = 'c_branda/load_content';
 // Detail 
 $route['getDataContentDetail'] = 'c_branda/load_details';
 
-$route['portal'] = 'portal/c_portal/profile';
-$route['portal/profile'] = 'portal/c_portal/profile';
-$route['portal/profile/about-me'] = 'portal/c_portal/about_me';
-$route['portal/profile/biodata'] = 'portal/c_portal/biodata';
-$route['portal/profile/education'] = 'portal/c_portal/education';
-$route['portal/profile/skills'] = 'portal/c_portal/skills';
-$route['portal/profile/work-experience'] = 'portal/c_portal/work_experience';
-$route['portal/profile/setting'] = 'portal/c_portal/setting';
+$route['portal'] = 'portal/c_portal/index';
 
-// Questionnaire
-$route['portal/questionnaire'] = 'portal/c_questionnaire/questionnaire';
-
-
-// Alumni Forum
-$route['portal/alumni-forum'] = 'portal/c_alumni_forum/alumni_forum';
-$route['forum/detail-topic/(:any)'] = 'portal/c_alumni_forum/detail_topic/$1';
-
-
-// Alumni Forum
-$route['portal/testimony'] = 'portal/c_testimony/testimony';
-
-
-// Notification
-$route['portal/notification'] = 'portal/c_notification/notification';
 
 
 // auth alumni
-$route['auth/loginAlumni'] =  'c_login/login';
-$route['auth/logoutAlumni'] =  'c_login/logout';
+$route['auth/loginPodivers'] =  'c_login/login';
+$route['auth/logoutPodivers'] =  'c_login/logout';
 
+$route['portal/(:any)'] = 'portal/c_portal/menu_content';
+// $route['portal/partner'] = 'portal/c_portal/partner';
+// $route['portal/content'] = 'portal/c_portal/content';
+// $route['portal/event'] = 'portal/c_portal/event';
+// $route['portal/testimonial'] = 'portal/c_portal/testimonial';
+// $route['portal/newsletter'] = 'portal/c_portal/newsletter';
+// $route['portal/setting'] = 'portal/c_portal/setting';
+// // left menu
 
-// left menu
-$route['get_picture'] = 'portal/c_portal/get_picture';
-
-// action
-$route['get_picture'] = 'portal/c_portal/get_picture';
-$route['action1/change_photo'] = 'portal/c_action1/change_photo';
-$route['action1/about_me'] = 'portal/c_action1/about_me';
-$route['action1/load_data_alumni'] = 'portal/c_action1/load_data_alumni';
-$route['action1/submit_biodata'] = 'portal/c_action1/submit_biodata';
-$route['action1/load_data_education'] = 'portal/c_action1/load_data_education';
-$route['action1/submit_education'] = 'portal/c_action1/submit_education';
-$route['action1/load_data_skills'] = 'portal/c_action1/load_data_skills';
-$route['action1/submit_skills'] = 'portal/c_action1/submit_skills';
-$route['action1/load_data_forum'] = 'portal/c_action1/load_data_forum';
-$route['action1/submit_forum_alumni'] = 'portal/c_action1/submit_forum_alumni';
-$route['action1/get_detail_topic'] = 'portal/c_action1/get_detail_topic';
-$route['action1/submit_comment_forum'] = 'portal/c_action1/submit_comment_forum';
-$route['action1/Testimony'] = 'portal/c_action1/Testimony';
-$route['action1/load_work_experience'] = 'portal/c_action1/load_work_experience';
-$route['action1/submit_work_experience'] = 'portal/c_action1/submit_work_experience';
-$route['action1/Form_addCompany'] = 'portal/c_action1/Form_addCompany';
-$route['action1/submit_add_company'] = 'portal/c_action1/submit_add_company';
 
 // end action
 

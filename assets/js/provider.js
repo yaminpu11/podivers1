@@ -1,6 +1,3 @@
-
-
-
 function getDataContent(type, element) {
     var data = {
         type : type,
@@ -8,7 +5,7 @@ function getDataContent(type, element) {
 
     var token = jwt_encode(data,'UAP)(*');
     var url = base_url_js+'getDataContent';
-    var locimg = base_url_js_sw+'uploads/alumni';
+    var locimg = base_url_js+'uploads/';
     $.ajax({
         type: "POST",
         dataType: "json",
@@ -106,7 +103,7 @@ function getdataBlogsByApi(type, element) {
                 var strtittlew1 = response[i].Title;
                 var titleres1 = (strtittlew1.length>30) ? strtittlew1.split(' ')[0]+' '+strtittlew1.split(' ')[1]+' '+strtittlew1.split(' ')[2]+' '+strtittlew1.split(' ')[3]+'...' : strtittlew1;
                 var str = response[i].Content;
-                var res = str.substring(110,0);
+                var res = str.substring(210,0);
                 var activeLink = (i == 0) ? 'active' : '';
                 $('#ViewNewsLimit').append('<div class="carousel-item active">'+
                   '<div class="w-100">'+
@@ -209,7 +206,7 @@ function getdataBlogsByApiBPM(type, element) {
                 var strtittlew1 = response[i].Title;
                 var titleres1 = (strtittlew1.length>30) ? strtittlew1.split(' ')[0]+' '+strtittlew1.split(' ')[1]+' '+strtittlew1.split(' ')[2]+' '+strtittlew1.split(' ')[3]+'...' : strtittlew1;
                 var str = response[i].Content;
-                var res = str.substring(110,0);
+                var res = str.substring(210,0);
                 var activeLink = (i == 0) ? 'active' : '';
                 $('#ViewBPMNewsLimit').append('<div class="carousel-item active">'+
                   '<div class="w-100">'+
@@ -338,7 +335,7 @@ function getDataContentAll(type, element) {
 
     var token = jwt_encode(data,'UAP)(*');
     var url = base_url_js+'getDataContent';
-    var locimg = base_url_js_sw+'uploads/alumni/';
+    var locimg = base_url_js+'uploads/';
     $.ajax({
         type: "POST",
         dataType: "json",
@@ -414,7 +411,7 @@ function getDataContentEventDetail(type,id, element) {
 
     var token = jwt_encode(data,'UAP)(*');
     var url = base_url_js+'getDataContentDetail';
-    var locimg = base_url_js_sw+'uploads/alumni/';
+    var locimg = base_url_js+'uploads/';
     $.ajax({
         type: "POST",
         dataType: "json",

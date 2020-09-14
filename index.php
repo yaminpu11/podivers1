@@ -90,18 +90,18 @@
 			define("port",$port_user, true);
 
 			// Local Nandang
-			define("url_server","http://localhost/alumni/", true);		
+			define("url_server","http://localhost/podivers1/", true);		
 			define("url_server_ws",$HostPath."localhost".port."/".$folder_user."/", true);
 			define("url_blog","http://localhost/blogs/", true);
-			define("url_blog_admin","http://localhost/blog_cms/", true);
+			define("url_blog_admin","http://localhost/blogscms/", true);
 
 			define("url_image_lecturer",url_server_ws."uploads/employees/", true);
 			define("url_image_students",url_server_ws."uploads/students/", true);
 			define("url_sign_out",$HostPath."localhost".port."/".$portal_user."/", true);
 			define("url_registration",$HostPath."localhost/registeronline/");
 			break;
-		case 'alumni.podomorouniversity.ac.id':
-			define("url_server",$HostPath."alumni.podomorouniversity.ac.id/", true);
+		case 'podivers.podomorouniversity.ac.id':
+			define("url_server",$HostPath."podivers.podomorouniversity.ac.id/", true);
 			define("url_server_ws",$HostPath."pcam.podomorouniversity.ac.id/", true);
 			define("url_image_lecturer",url_server_ws."uploads/employees/", true);
 			define("url_image_students",url_server_ws."uploads/students/", true);
@@ -110,9 +110,11 @@
 			define("url_blog",$HostPath."blogs.podomorouniversity.ac.id/", true);
 			define("url_blog_admin",$HostPath."adminblogs.podomorouniversity.ac.id/", true);
 			break;
-		case 'demoalumni.podomorouniversity.ac.id':
-			define("url_server",$HostPath."demoalumni.podomorouniversity.ac.id/", true);
+		case 'demopodivers.podomorouniversity.ac.id':
+			define("url_server",$HostPath."demopodivers.podomorouniversity.ac.id/", true);
 			define("url_server_ws",$HostPath."demopcam.podomorouniversity.ac.id/", true);
+			define("url_blog",$HostPath."blogs.podomorouniversity.ac.id/", true);
+			define("url_blog_admin",$HostPath."adminblogs.podomorouniversity.ac.id/", true);
 			define("url_image_lecturer",url_server_ws."uploads/employees/", true);
 			define("url_image_students",url_server_ws."uploads/students/", true);
 			define("url_sign_out",$HostPath."demoportal.podomorouniversity.ac.id/", true);

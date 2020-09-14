@@ -3,7 +3,7 @@
 <div class="card card-cascade wider reverse mb-5" >
 
   <!-- Card image -->
-  <div class="view  overlay" style="background-image: url(<?= base_url()?>/assets/images/event.png);
+  <div class="view  overlay py-5" style="background-image: url(<?= base_url()?>/assets/images/event.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;">

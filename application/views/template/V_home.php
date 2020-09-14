@@ -835,8 +835,9 @@
           <hr class="w-header bg-white-hr">  
           <form class="text-center pt-3 " style="color: #757575;" action="#!">
 
-              <div class="input-group mb-3">
-                <input type="text" class="form-control btn-outline btn-rounded py-3 col-md-6 offset-md-3 font-weight-bold" placeholder="E-mail" style="font-size: 25px">                
+              <div class="input-group mb-3 col-md-8 offset-md-2 justify-content-md-center">
+                <input type="text" class="form-control btn-outline btn-rounded py-3 col-md-7 font-weight-bold px-3" placeholder="E-mail" style="font-size: 25px">
+                <button class="form-control btn-floatingnews btn-primary col-md-2 " data-toggle="modal" data-target="#modal1"><i class="fas fa-paper-plane"></i></button>               
               </div>
 
               <!-- Sign in button -->
@@ -844,7 +845,7 @@
 
           </form>
           <!-- Form -->
-          <a id="play" class="btn-floating btn-primary btn-lg" data-toggle="modal" data-target="#modal1"><i class="fas fa-paper-plane"></i></a>
+          
       </div>
 
     </div>
